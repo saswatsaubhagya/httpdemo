@@ -63,10 +63,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     left: 20,
                     right: 20,
                   ),
-                  child: Image.network(
-                    _photos[index].url,
-                    height: 100,
-                    width: double.maxFinite,
+                  child: Column(
+                    children: [
+                      Center(child: Text(_photos[index].title)),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Image.network(
+                        _photos[index].url,
+                        height: 100,
+                        width: double.maxFinite,
+                      )
+                    ],
                   ),
                 ),
               ),
